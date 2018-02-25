@@ -260,7 +260,83 @@ h2:hover {
   height: 12vw;
   align-items: center;
   flex-direction: column;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
 }
+
+
+.chart-section .tooltip {
+  font-size: 12px;
+  background: #364052;
+  bottom: 100%;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+  display: block;
+  left: 33%;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  border-radius: 3px;
+  width: 40%;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+.tooltip span {
+  color: #35b4bd;
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.chart-section .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.chart-section .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #364052 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+  
+.chart-section:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .chart-section img {
     width: auto;
     height: 100%;
@@ -306,8 +382,9 @@ h2:hover {
   color: #7d8ba5;
 }
 
-.main-btm-item.last {
+.main-btm-item.last, .main-btm-widgets .last {
   border: none;
+  padding-bottom: 0;
 }
 
 .main-btm-item h4 {
@@ -326,11 +403,11 @@ h2:hover {
 .main-btm-left {
   width: 66%;
   background: #fff;
+  border-radius: 3px;
 }
 
 .main-btm-right {
   width: 28%;
-  background: blue;
 }
 
 .main-btm-header {
@@ -344,21 +421,31 @@ h2:hover {
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+    border-radius: 3px 3px 0 0;
 }
 
 .main-btm-header svg {
   padding-right: 5px;
 }
 
-.main-btm-header span {
+.main-btm-header a {
   font-size: 12px;
   background: #7d8ba5;
-  padding: 6px 10px;
+  padding: 2px 10px;
   margin-left: 20px;
+  color: #fff;
+}
+
+.main-btm-header a:hover {
+  background: #8a98b4;
 }
 
 .main-btm-container {
-  padding: 30px;
+  padding: 10px 30px 30px 30px;
+}
+
+.main-btm-widgets svg {
+  margin-right: 8px;
 }
 
 .lead, .lead span {
@@ -368,6 +455,94 @@ h2:hover {
 
 .lead img {
   margin-right: 10px;
+}
+
+.main-btm-social a {
+  height: 45px;
+  margin-bottom: 15px;
+  color: #fff;
+  display: flex; 
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 20px;
+}
+
+.main-btm-social a.last {
+  margin-bottom: 0;
+}
+
+.main-btm-social svg {
+  margin-right: 45px;
+
+}
+
+.facebook {
+  background: #4c72c4;
+}
+
+.facebook:hover {
+  background: #4c72c4;
+  background: linear-gradient(to bottom, rgba(76,114,196,1) 0%, rgba(56,83,143,1) 100%);
+}
+
+.twitter {
+  background: #02abf0;
+}
+
+.twitter:hover{
+  background: #02abf0;
+  background: linear-gradient(to bottom, rgba(2,173,240,1) 0%, rgba(0,132,184,1) 100%);
+}
+
+.linkedin {
+  background: #0482bd;
+}
+
+.linkedin:hover {
+  background: #0482bd;
+  background: linear-gradient(to bottom, rgba(4,130,189,1) 0%, rgba(8,104,148,1) 100%);
+}
+
+h5 {
+  color: #354052;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.main-btm-widgets article {
+  padding: 35px 0;
+  border-bottom: 1px solid #ddd;
+  color: #7d8ba5;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.main-btm-widgets input {
+  height: 95%;
+  width: 73%;
+  padding-left: 5%;
+  border-radius: 3px 0 0 3px;
+  border: none;
+}
+
+.copy-link {
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+
+.main-btm-widgets a {
+  width: 20%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  height: 45px;
+  border-radius: 0 3px 3px 0;
+  background: #47bac1;
+  border: #47bac1;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 /*aside styles*/
@@ -431,6 +606,21 @@ li:hover a {
   color: #fff;
 }
 
+.side-nav .yellow svg {
+  color: yellow;
+}
+
+.side-nav .blue svg {
+  color: blue;
+}
+
+.side-nav .green svg {
+  color: green;
+}
+
+.side-nav .red svg {
+  color: red;
+}
 
 .side-nav {
     text-transform: uppercase;
