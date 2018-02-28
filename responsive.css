@@ -30,6 +30,9 @@
   h2 {
       margin-right: 20px;
   }
+  .graphs-subtitle {
+    width: 150px;
+  }
 
 }
 
@@ -39,110 +42,119 @@
     height: 186px;
   }
 
-.header-links {
-    width: auto;
+  .header-links {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0px;
-    margin-left: -10px;
     float: none;
-}
+    margin-left: -10px;
+    margin-top: 0px;
+    width: auto;
+  }
 
-.main-btm-widgets a {
-  width: 100%;
-  border-radius: 3px;
-}
-
-.main-btm-social a {
-  font-size: 12px;
-  padding-right: 10px;
-}
-
-.chart-section img {
+  .chart-section img {
     width: auto;
     height: 90%;
-}
+  }
+
+  .main-btm-social a {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+
+  .main-btm-widgets a {
+    border-radius: 3px;
+    width: 100%;
+  }
 
 }
 
 @media only screen and (max-width: 675px) {
 
 .mobile {
-    display: inline-block;
+  display: inline-block;
 }
 
 .desktop {
-    display: none;
-}
-
-.main-btm-social.desktop {
   display: none;
 }
 
-h1 {
-    font-size: 20px;
-    margin-top: 14px;
+aside { 
+  align-content: center;
+  display: none;
+  text-align: center;
+  width: 100%;
 }
 
-h3 {
+.close-nav { 
+  display: none;
+  font-size: 24px;
+  position: absolute;
+  right: 70px;
+  top: 20px;
+}
+
+aside .account-name {
+  font-size: 15px;
+  width: 30%;
+}
+
+.side-nav { 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 { 
   font-size: 18px;
 }
 
-.top-menu {
-    width: 100%;
-    border-right: 1px solid #ddd;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    color: #666;
-    padding-left: 30px;
-}
-
-aside {
-  display: none;
-  width: 100%;
-  text-align: center;
-  align-content: center;
-}
-
-.side-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-aside li {
+aside li { 
   margin: 0;
   padding: 0;
 }
 
-.top-bar-mobile {
-    background: #fff;
-    justify-content: space-between;
-    display: flex;
-    width: auto;
-    border-bottom: 1px solid #ddd;
-    padding-right: 30px;
+.top-bar-mobile { 
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  width: auto;
 }
 
-.top-icon {
-  width: 70px;
-  border-right: 0;
-  height: 70px;
-  display: flex;
+.top-menu {
   align-items: center;
-  justify-content: center;
+  border-right: 1px solid #ddd;
   color: #666;
+  display: flex;
+  height: 100%;
+  justify-content: left;
+  padding-left: 30px;
+  width: 100%;
+}
+
+h1 { 
+  font-size: 20px;
+  margin-top: 14px;
+}
+
+.top-icon { 
+  align-items: center;
+  border-right: 0;
+  color: #666;
+  display: flex;
+  height: 70px;
+  justify-content: center;
   padding-left: 0px;
+  width: 70px;
 }
 
 .mobile .left-account-info {
-    height: 70px;
-    width: 200px;
-    display: flex;
-    flex-direction: row;
-    border-bottom: 0;
+  border-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 200px;
 }
 
 .mobile .left-account-info img {
@@ -150,42 +162,56 @@ aside li {
 }
 
 .mobile .account-name a { 
-    color: #6d7081;
-    font-size: 14px;
+  color: #6d7081;
+  font-size: 14px;
 }
 
-.top-content-links {
-    padding-left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.top-content-links { 
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  width: 100%;
 }
 
-.search.mobile {
-  height: 75px;
+.search.mobile { 
   background: #fff;
   border-bottom: 1px solid #ddd;
   box-shadow: inset 3px 2px 5px #efefef;
   display: block;
-}
-
-.active h2{
-  margin-left: 45px;
-  margin-right: 45px;
-}
-
-h2 {
-  margin: 0;
+  height: 75px;
 }
 
 .search.mobile input {
   width: 90%;
 }
 
-.header-links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+header {
+  height: 195px;
+  text-align: center;
+}
+
+.header-links { 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-top-links { 
+  color: #c5d0e2;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-top-links svg { 
+  margin: 0 15px 15px 15px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.active h2 { 
+  margin: 0 45px;
 }
 
 .header-links a {
@@ -194,53 +220,97 @@ h2 {
   margin-bottom: 35px;
 }
 
-.top-content-graphs {
+.top-content-graphs { 
   display: block;
   position: relative;
 }
 
-.chart-section img {
-    width: 77%;
-    margin-top: 40px;
-}
-
-.graphs-section {
-    width: 100%;
-    margin-right: 0;
-    height: 40vw;
-}
-
-.chart-section {
-    width: 100%;
-    margin-right: 0;
-    height: 47vw;
-    margin-top: 20px;
-}
-
-.main-btm-content {
-    display: block;
-    padding: 30px;
-}
-.main-btm-left, .main-btm-right {
-    width: 100%;
-}
-
-header {
-  text-align: center;
-  height: 195px;
-}
-
-.mobile-top-links {
-  color: #c5d0e2;
-  display: flex;
+.graph-arrows { 
   align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 40px;
+  justify-content: space-between;
+  left: 20px;
+  position: absolute;
+  top: 240px;
+  width: 90%;
 }
 
-.mobile-top-links svg {
-  margin: 0 15px 15px 15px;
+.graphs-section { 
+  height: 40vw;
+  margin-right: 0;
+  width: 100%;
 }
 
-.copy-link {
+.donut-graphs, .bar-chart { 
+  display: flex;
+  height: 22vw;
+  justify-content: center;
+}
+
+.chart-section { 
+  height: 47vw;
+  margin-right: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.chart-section img { 
+  margin-top: 40px;
+  width: 77%;
+}
+
+.main-btm-content { 
+  display: block;
+  padding: 30px;
+}
+
+.main-btm-left, .main-btm-right { 
+  width: 100%;
+}
+
+.main-btm-social.desktop { 
+  display: none;
+}
+
+.main-btm-header { 
+  margin-top: 25px;
+}
+
+.main-btm-widgets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-btm-widgets svg { 
+  margin: 15px auto;
+  font-size: 22px;
+}
+
+.main-btm-widgets article {
+  border-bottom: 0;
+  color: #7d8ba5;
+  float: left;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 5%;
+  padding: 35px 0;
+  text-align: center;
+  width: 28%;
+}
+
+.main-btm-widgets .last {
+  margin-right: 0;
+}
+
+h5 { 
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+
+.copy-link { 
   margin-top: 30px;
 }
 
@@ -248,109 +318,41 @@ header {
   background: #36a7ae;
 }
 
-
-.graph-arrows {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  position: absolute;
-  align-items: center;
-  left: 20px;
-  color: #fff;
-  font-size: 40px;
-  top: 240px;
-}
-
-.main-btm-header {
-    margin-top: 25px;
-  }
-
-.main-btm-widgets {
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-btm-widgets article {
-    padding: 35px 0;
-    border-bottom: 0;
-    color: #7d8ba5;
-    font-size: 12px;
-    width: 28%;
-    line-height: 20px;
-    float: left;
-    text-align: center;
-    margin-right: 5%;
-}
-
-.main-btm-widgets .last {
-  margin-right: 0;
-}
-
-h5 {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-}
-
-.main-btm-widgets svg {
-    margin: 15px auto;
-    font-size: 22px;
-}
-
-footer {
-  height: 60px;
+footer { 
   background: #fff;
-  width: auto;
-  font-size: 14px;
-  padding: 30px;
   border-top: 1px solid #ddd;
   color: #6f7e95;
+  font-size: 14px;
+  height: 60px;
+  padding: 30px;
+  width: auto;
+}
+
+footer.mobile { 
+  align-items: flex-end;
+  display: flex;
 }
 
 footer strong {
-  text-transform: uppercase;
   color: #354052;
-}
-
-.close-nav {
-  font-size: 24px;
-  position: absolute;
-  right: 70px;
-  top: 20px;
-  display: none;
-}
-
-aside .account-name {
-  width: 30%;
-  font-size: 15px;
-}
-
-.donut-graphs, .bar-chart {
-  height: 22vw;
-  display: flex;
-  justify-content: center;
-}
-
-.share-icons {
-  width: 39%;
+  text-transform: uppercase;
 }
 
 .share-text {
   width: 70%;
 }
 
-footer.mobile {
-      display: flex;
-    align-items: flex-end;
-}
-
-.share-text p {
+.share-text p { 
   margin-bottom: 0;
 }
 
-.share-icons svg {
-    font-size: 38px;
-    margin-left: 12px;
+.share-icons {
+  width: 39%;
+}
+
+.share-icons svg { 
+  font-size: 38px;
+  margin-left: 12px;
 }
 
 }
@@ -358,13 +360,12 @@ footer.mobile {
 @media only screen and (max-width: 500px) {
 
 .share-icons svg {
-    font-size: 30px;
-    margin-left: 10px;
+  font-size: 30px;
+  margin-left: 10px;
 }
 
 .share-text {
   font-size: 11px;
 }
-
 
 }
