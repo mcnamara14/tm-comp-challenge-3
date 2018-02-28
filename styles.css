@@ -457,12 +457,11 @@ h2:hover {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  padding: 45px;
+  padding: 55px 45px 45px 45px;
 }
 
 /*bottom left*/
 .main-btm-left {
-  background: #fff;
   border-radius: 3px;
   width: 66%;
 }
@@ -503,11 +502,20 @@ h2:hover {
 
 .main-btm-item {
   align-items: top;
+  background: #fff;
   border-bottom: 1px solid #ddd;
   color: #7d8ba5;
   display: flex;
   font-size: 12px;
-  padding: 30px 0;
+  padding: 30px;
+}
+
+td.main-btm-title {
+  width: 30%;
+}
+
+td.main-btm-desc {
+  width: 70%;
 }
 
 h4 {
@@ -515,7 +523,6 @@ h4 {
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
-  width: 29%;
 }
 
 .main-btm-item span {
@@ -525,10 +532,10 @@ h4 {
 
 .main-btm-item.last, .main-btm-widgets .last {
   border: none;
-  padding-bottom: 0;
+  padding-bottom: 45px;
 }
 
-.lead, .lead span {
+.lead, .lead .main-btm-desc {
   display: flex;
   align-items: center;
 }
