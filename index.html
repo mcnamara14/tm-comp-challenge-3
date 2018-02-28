@@ -3,8 +3,11 @@
 <html lang="en">
 <head>
   <title>Static Comp 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="normalize.css">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script defer src="/static/fontawesome/fontawesome-all.js"></script>
 </head>
@@ -12,7 +15,9 @@
 <body>
 
 <aside>
-
+  <section class="close-nav mobile">
+    <a href="#"><i class="fas fa-times"></i></a>
+  </section>
   <section class="left-account-info">
     <img src="images/account-img.png" />
     <article class="account-name">
@@ -20,7 +25,6 @@
       <a href="#"><i class="fas fa-angle-down"></i></a>
     </article>
   </section>
-
   <section class="left-main side-nav">
     <h3>Main</h3>
     <ul>
@@ -31,7 +35,6 @@
       <li><div><i class="fas fa-calendar-alt"></i></div><a href="#">Calendar</a></li>
     </ul>
   </section>
-
   <section class="left-admin side-nav">
     <h3>Admin</h3>
     <ul>
@@ -42,7 +45,6 @@
       <li><div><i class="fas fa-user-plus"></i></div><a href="#">Social</a></li>
     </ul>
   </section>
-
   <section class="left-categories side-nav">
     <h3>Categories</h3>
     <ul>
@@ -52,19 +54,35 @@
       <li><div class="green"><i class="fas fa-square"></i></div><a href="#">Human Resources</a></li>
     </ul>
   </section>
-
-
 </aside>
 
-<section class="top-bar">
-    <a href="#" class="top-menu top-icon">
+<section class="container">
+  <section class="top-bar-mobile mobile">
+    <a href="#" class="top-menu top-icon desktop">
       <i class="fas fa-bars"></i>
     </a>
-    <section class="search">
+    <section class="left-account-info">
+      <img src="images/account-img.png" />
+      <article class="account-name">
+        <a href="#">Bojack Horseman</a>
+        <a href="#"><i class="fas fa-angle-down"></i></a>
+      </article>
+    </section>
+  </section>
+  <section class="search mobile">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search for job, task, or resume" />
+  </section>
+
+  <section class="top-bar desktop">
+    <a href="#" class="top-menu top-icon desktop">
+      <i class="fas fa-bars"></i>
+    </a>
+    <article class="search">
       <i class="fas fa-search"></i>
       <input type="text" placeholder="Search for job, task, or resume" />
-    </section>
-    <section class="top-icons">
+    </article>
+    <article class="top-icons">
       <a href="#" class="top-left-icon top-icon">
         <i class="fas fa-user-plus"></i>
       </a>
@@ -74,93 +92,101 @@
       <a href="#" class="top-right-icon top-icon">
         <i class="fab fa-black-tie"></i>
       </a>
+    </article>
+  </section>
+
+  <main class="main-content">
+
+  <header>
+    <section class="title">
+      <h1>Customer Service Representative</h1>
+      <i class="fas fa-globe"></i>Los Angeles, CA
+      <i class="fas fa-circle"></i><a href="#">Preview this post</a>
     </section>
-  </section>
+    <section class="header-links">
+      <a href="#" class="header-link-1"><i class="fas fa-circle"></i>Open</a>
+      <a href="#" class="header-link-2"><i class="fas fa-bookmark"></i></a>
+      <a href="#" class="header-link-3"><i class="fas fa-pencil-alt"></i></a>
+      <a href="#" class="header-link-4"><i class="fas fa-trash-alt"></i></a>
+    </section>
+  </header>
 
-<main class="main-content">
-
-<header>
-  <section class="title">
-    <h1>Customer Service Representative</h1>
-    <i class="fas fa-globe"></i>Los Angeles, CA
-    <i class="fas fa-circle"></i><a href="#">Preview this post</a>
-  </section>
-  <section class="header-links">
-    <a href="#" class="header-link-1"><i class="fas fa-circle"></i>Open</a>
-    <a href="#" class="header-link-2"><i class="fas fa-bookmark"></i></a>
-    <a href="#" class="header-link-3"><i class="fas fa-pencil-alt"></i></a>
-    <a href="#" class="header-link-4"><i class="fas fa-trash-alt"></i></a>
-  </section>
-</header>
-
-<section class="top-content">
-  <section class="top-content-links">
-    <a href="#" class="active"><h2>Summary</h2></a>
-    <a href="#"><h2>Applicants</h2></a>
-    <a href="#"><h2>Job Board</h2></a>
-    <a href="#"><h2>Interviews</h2></a>
-    <a href="#"><h2>Activity</h2></a>
-    <a href="#"><h2>Broadcast</h2></a>
-    <a href="#"><h2>Notifications</h2></a>
-  </section>
-
-  <section class="top-content-graphs">
-
-    <section class="graphs-section">
-
-      <section class="donut-graphs">
-
-        <article class="graph">
-          <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
-            <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-            <circle class="graph-circle" stroke="#00acc1" stroke-width="2" stroke-dasharray="40,20" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-            <g class="chart-info">
-              <text class="graph-large-text chart-text" x="16.91549431" y="15.5">2,173</text>
-              <text class="graph-small-text chart-text" x="16.91549431" y="20.5">Applicants</text>
-            </g>
-          </svg>
-        </article>
-
-        <article class="graph">
-          <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
-            <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-            <circle class="graph-circle" stroke="#17a3f9" stroke-width="2" stroke-dasharray="20,90" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-            <g class="chart-info">
-              <text class="graph-large-text chart-text" x="16.91549431" y="15.5">1,546</text>
-              <text class="graph-small-text chart-text" x="16.91549431" y="20.5">Interviews</text>
-            </g>
-          </svg>
-        </article>
-
-        <article class="graph">
-          <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
-            <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-            <circle class="graph-circle" stroke="#aa61ae" stroke-width="2" stroke-dasharray="80,20" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
-            <g class="chart-info">
-              <text class="graph-large-text chart-text" x="16.91549431" y="15.5">912</text>
-              <text class="graph-small-text chart-text" x="16.91549431" y="20.5">Forwards</text>
-            </g>
-          </svg>
-        </article>
-
-      </section>
-
-      <section class="graphs-subtitle">
-        TOTALS - Out of 5,231 Views
-      </section>
+  <section class="top-content">
+    <section class="top-content-links">
+      <article class="mobile-top-links mobile">
+        <i class="fas fa-ellipsis-h"></i>
+        <a href="#"><h2>Notifications</h2> </a>
+        <a href="#" class="active"><h2>Summary</h2></a>
+        <a href="#"><h2>Applicants</h2></a>
+        <i class="fas fa-ellipsis-h"></i>
+      </article>
+      <a href="#" class="active desktop"><h2>Summary</h2></a>
+      <a href="#" class="desktop"><h2>Applicants</h2></a>
+      <a href="#" class="desktop"><h2>Job Board</h2></a>
+      <a href="#" class="desktop"><h2>Interviews</h2></a>
+      <a href="#" class="desktop"><h2>Activity</h2></a>
+      <a href="#" class="desktop"><h2>Broadcast</h2></a>
+      <a href="#" class="desktop"><h2>Notifications</h2></a>
     </section>
 
-  <section class="chart-section">
-    <img src="images/chart.png" />
-    <div class="tooltip"><strong>Wednesday, December 3</strong><br /><span>382</span> Applicatants / <span>37</span> Interviews</div>
-      <section class="graphs-subtitle">
-        TOTALS - Out of 5,231 Views
-      </section>
-    </section>
-  </section>
+    <section class="top-content-graphs">
+      <article class="graph-arrows mobile">
+        <i class="fas fa-angle-left"></i>
+        <i class="fas fa-angle-right"></i>
+      </article>
 
-<section class="hr"><span></span><i class="fas fa-angle-up"></i><span></span></section>
-</section>
+      <section class="graphs-section">
+        <section class="donut-graphs">
+          <article class="graph">
+            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+              <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              <circle class="graph-circle" stroke="#00acc1" stroke-width="2" stroke-dasharray="40,20" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              <g class="chart-info">
+                <text class="graph-large-text chart-text" x="16.91549431" y="15.5">2,173</text>
+                <text class="graph-small-text chart-text" x="16.91549431" y="20.5">Applicants</text>
+              </g>
+            </svg>
+          </article>
+          <article class="graph">
+            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+              <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              <circle class="graph-circle" stroke="#17a3f9" stroke-width="2" stroke-dasharray="20,90" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              <g class="chart-info">
+                <text class="graph-large-text chart-text" x="16.91549431" y="15.5">1,546</text>
+                <text class="graph-small-text chart-text" x="16.91549431" y="20.5">Interviews</text>
+              </g>
+            </svg>
+          </article>
+          <article class="graph">
+            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+              <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              <circle class="graph-circle" stroke="#aa61ae" stroke-width="2" stroke-dasharray="80,20" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              <g class="chart-info">
+                <text class="graph-large-text chart-text" x="16.91549431" y="15.5">912</text>
+                <text class="graph-small-text chart-text" x="16.91549431" y="20.5">Forwards</text>
+              </g>
+            </svg>
+          </article>
+        </section>
+        <article class="graphs-subtitle">
+          TOTALS - Out of 5,231 Views
+        </article>
+      </section>
+
+      <section class="chart-section">
+        <article class="bar-chart">
+          <img src="images/chart.png" />
+        </article>
+        <article class="tooltip"><strong>Wednesday, December 3</strong><br /><span>382</span> Applicatants / <span>37</span> Interviews
+        </article>
+        <article class="graphs-subtitle">
+          TOTALS - Out of 5,231 Views
+        </article>
+        </section>
+      </section>
+
+  <section class="hr"><span></span><i class="fas fa-angle-up"></i><span></span></section>
+  </section>
 
 <section class="main-btm-content">
   <section class="main-btm-left">
@@ -177,7 +203,7 @@
     </section>
   </section>
   <section class="main-btm-right">
-    <section class="main-btm-social">
+    <section class="main-btm-social desktop">
       <a href="#" class="facebook"><i class="fab fa-facebook-f"></i>Post to Facebook</a>
       <a href="#"" class="twitter"><i class="fab fa-twitter"></i>Tweet this Job</a>
       <a href="#" class="linkedin last"><i class="fab fa-linkedin-in"></i>Post to Linkedin</a>
@@ -187,33 +213,45 @@
         <h5><i class="fas fa-globe"></i>Link to this job</h5>
         <p>Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good with tail in the air for put toy mouse in food bowl.</p>
         <div class="copy-link">
-          <input type="text" placeholder="http://www.catipsum.com/index.php">
-          <a href="#">Copy</a>
+          <input type="text" placeholder="http://www.catipsum.com/index.php" class="desktop">
+          <a href="#">Copy<span class="mobile">&nbsp;Link</span></a>
         </div>
       </article>
       <article>
         <h5><i class="fas fa-credit-card"></i>Use the budget widget</h5>
         <p>Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good with tail in the air for put toy mouse in food bowl.</p>
         <div class="copy-link">
-          <input type="text" placeholder="http://www.catipsum.com/index.php">
-          <a href="#">Copy</a>
+          <input type="text" placeholder="http://www.catipsum.com/index.php" class="desktop">
+          <a href="#">Copy<span class="mobile">&nbsp;Link</span></a>
         </div>
       </article>
       <article class="last">
         <h5><i class="fas fa-newspaper"></i>Upload resumes by email</h5>
         <p>Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good with tail in the air for put toy mouse in food bowl.</p>
         <div class="copy-link">
-          <input type="text" placeholder="http://www.catipsum.com/index.php">
-          <a href="#">Copy</a>
+          <input type="text" placeholder="http://www.catipsum.com/index.php" class="desktop">
+          <a href="#">Copy<span class="mobile">&nbsp;Link</span></a>
         </div>
       </article>
     </section>
   </section>
 </section>
 
-
+<footer class="mobile">
+  <article class="share-text">
+    <strong>Share the position</strong>
+    <p>Have a friend that’s looking for a Job?<br />Share this with them.</p>
+  </article>
+  <article class="share-icons">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter-square"></i>
+    <i class="fab fa-linkedin"></i>
+  </article>
+</footer>
 
 </main>
+
+</section>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="jquery-3.3.1.min.js"><\/script>')</script>
 <script src="script.js"></script>
