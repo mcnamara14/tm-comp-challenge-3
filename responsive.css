@@ -350,7 +350,8 @@ footer strong {
   width: 39%;
 }
 
-.share-icons svg { 
+.share-icons a { 
+  color: #6f7e95;
   font-size: 38px;
   margin-left: 12px;
 }
@@ -359,7 +360,7 @@ footer strong {
 
 @media only screen and (max-width: 500px) {
 
-.share-icons svg {
+.share-icons a {
   font-size: 30px;
   margin-left: 10px;
 }
