@@ -1,11 +1,19 @@
 body {
   background: #354052;
 }
+
 main {
   width: auto;
   overflow: hidden;
   background: #edf2f6;
 }
+
+a {
+  color: #c5d0e2;
+  text-decoration: none;
+}
+
+/*top bar*/
 
 .top-bar {
   height: 70px;
@@ -14,6 +22,12 @@ main {
   flex-flow: row wrap;
   justify-content: space-around;
   background: #fff;
+}
+
+.top-icons {
+    width: 210px;
+    border-left: 1px solid #ddd;
+    display: flex;
 }
 
 .top-icon {
@@ -29,12 +43,6 @@ main {
 .top-icon:hover {
   background: #16a4fa;
   color: #fff;
-}
-
-.top-icons {
-    width: 210px;
-    border-left: 1px solid #ddd;
-    display: flex;
 }
 
 .search {
@@ -58,16 +66,12 @@ main {
   outline: none;
 }
 
-
 .search svg {
     position: relative;
     left: 30px;
 }
 
-a {
-  color: #c5d0e2;
-  text-decoration: none;
-}
+/*header*/
 
 header {
   height: 135px;
@@ -82,11 +86,8 @@ header {
   display: inline-block;
 }
 
-h1 {
-  color: #354052;
-  font-size: 26px;
-  font-weight: normal;
-  margin-bottom: 10px;
+.title a {
+  color: #17a3f9;
 }
 
 .fa-globe {
@@ -97,12 +98,8 @@ h1 {
     font-size: 4px;
     color: #6d7081;
     margin-bottom: 3px;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.title a {
-  color: #17a3f9;
+    margin-right: 8px;
+    margin-left: 8px;
 }
 
 .header-links {
@@ -145,10 +142,20 @@ a.header-link-1 {
     margin-left: 0px;
 }
 
+.main-btm-social.desktop {
+  display: block;
+}
+
 .top-content-links {
   padding-left: 45px;
   text-transform: uppercase;
   background: #fff;
+}
+
+h1 {
+    font-size: 26px;
+    margin-top: 18px;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -169,6 +176,7 @@ h2:hover {
   border-bottom: 3px solid #17a3f9;
 }
 
+/*top content*/
 
 .top-content-graphs {
   background: #edf2f6;
@@ -177,44 +185,21 @@ h2:hover {
   display: flex;
 }
 
-.graph-circle {
-  animation: circle-chart-fill 2s reverse;
-  transform: rotate(-90deg);
-  transform-origin: center;
-}
-
-@keyframes circle-chart-fill {
-  to { stroke-dasharray: 0 100; }
+.bar-chart {
+    height: 17vw;
+    display: flex;
+    justify-content: center;
 }
 
 .graph {
-  width: auto;
   display: flex;
   position: relative;
-}
-
-.chart-info p {
-  margin: 0 0 -10px 0;
-}
-
-.donut-graphs {
-  display: flex;
-  justify-content: space-between;
-}
-
-.graph {
   width: 30%;
 }
 
 .circle-chart {
   width: 100%;
   height: 100%;
-}
-
-.chart-text {
-  alignment-baseline: central;
-  text-anchor: middle;
-  fill: #354052;
 }
 
 .graph-large-text {
@@ -233,37 +218,77 @@ h2:hover {
   fill: none;
 }
 
-.graphs-section {
-  width: 51%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 4%;
+.graph-circle {
+  animation: circle-chart-fill 2s reverse;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+.chart-info p {
+  margin: 0 0 -10px 0;
+}
+
+.chart-text {
+  alignment-baseline: central;
+  text-anchor: middle;
+  fill: #354052;
 }
 
 .graphs-subtitle {
   color: #354052;
   margin-top: 45px;
+  position: absolute;
   font-size: 12px;
   background: #fff;
   width: auto;
   display: inline-block;
   padding: 10px 15px;
+  bottom: 0;
   border: 1px solid #ddd;
   border-radius: 25px;
 }
 
+.graphs-subtitle:hover {
+  border: 1px solid #17a3f9;
+}
+
+.graphs-section {
+  width: 51%;
+  height: 22vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 14%;
+  position: relative;
+}
+
 .chart-section {
-  width: 45%;
+  width: 26%;
+  height: 22vw;
   display: flex;
   position: relative;
-  height: 12vw;
   align-items: center;
   flex-direction: column;
   -webkit-transform: translateZ(0); /* webkit flicker fix */
   -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
 }
 
+.donut-graphs {
+  display: flex;
+  justify-content: space-between;
+  height: 15vw;
+}
+
+.chart-section img {
+    width: auto;
+    height: 95%;
+}
+
+/*chart tooltip*/
 
 .chart-section .tooltip {
   font-size: 12px;
@@ -303,7 +328,7 @@ h2:hover {
 }
 
 /* This bridges the gap so you can mouse into the tooltip without it disappearing */
-.chart-section .tooltip:before {
+/*.chart-section .tooltip:before {
   bottom: -20px;
   content: " ";
   display: block;
@@ -312,8 +337,8 @@ h2:hover {
   position: absolute;
   width: 100%;
 }  
+*/
 
-/* CSS Triangles - see Trevor's post */
 .chart-section .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
@@ -335,11 +360,6 @@ h2:hover {
       -ms-transform: translateY(0px);
        -o-transform: translateY(0px);
           transform: translateY(0px);
-}
-
-.chart-section img {
-    width: auto;
-    height: 100%;
 }
 
 .hr {
@@ -365,12 +385,29 @@ h2:hover {
   color: #ddd;
 }
 
-/*main bottom content*/
+/*bottom content*/
+
 .main-btm-content {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   padding: 45px;
+}
+
+/*bottom left*/
+
+.main-btm-left {
+  width: 66%;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.main-btm-container {
+  padding: 10px 30px 30px 30px;
+}
+
+.main-btm-header svg {
+  padding-right: 5px;
 }
 
 .main-btm-item {
@@ -380,11 +417,6 @@ h2:hover {
   align-items: top;
   border-bottom: 1px solid #ddd;
   color: #7d8ba5;
-}
-
-.main-btm-item.last, .main-btm-widgets .last {
-  border: none;
-  padding-bottom: 0;
 }
 
 .main-btm-item h4 {
@@ -400,11 +432,21 @@ h2:hover {
   display: inline-block;
 }
 
-.main-btm-left {
-  width: 66%;
-  background: #fff;
-  border-radius: 3px;
+.main-btm-item.last, .main-btm-widgets .last {
+  border: none;
+  padding-bottom: 0;
 }
+
+.lead, .lead span {
+  display: flex;
+  align-items: center;
+}
+
+.lead img {
+  margin-right: 10px;
+}
+
+/*bottom right*/
 
 .main-btm-right {
   width: 28%;
@@ -424,10 +466,6 @@ h2:hover {
     border-radius: 3px 3px 0 0;
 }
 
-.main-btm-header svg {
-  padding-right: 5px;
-}
-
 .main-btm-header a {
   font-size: 12px;
   background: #7d8ba5;
@@ -440,21 +478,8 @@ h2:hover {
   background: #8a98b4;
 }
 
-.main-btm-container {
-  padding: 10px 30px 30px 30px;
-}
-
 .main-btm-widgets svg {
   margin-right: 8px;
-}
-
-.lead, .lead span {
-  display: flex;
-  align-items: center;
-}
-
-.lead img {
-  margin-right: 10px;
 }
 
 .main-btm-social a {
@@ -549,7 +574,7 @@ h5 {
 aside {
   width: 145px; /*Width of frame div*/
   height: 100%;
-  overflow: scroll; /*Disable scrollbars. Set to "scroll" to enable*/
+  overflow: scroll; 
   background: #354052;
   font-size: 12px;
   display: flex;
@@ -558,6 +583,7 @@ aside {
   align-content: center;
   padding: 0 20px;
   float: left;
+  position: relative;
 }
 
 .left-account-info {
@@ -636,6 +662,4 @@ li:hover a {
 .side-nav svg {
   color: #c5d0e2;
 }
-
-
 
