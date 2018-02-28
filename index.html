@@ -14,20 +14,20 @@
 
 <body>
 
-<aside>
-  <section class="close-nav mobile">
+<aside role="navigation">
+  <section class="close-nav mobile" aria-label="Close main navigation sidebar">
     <a href="#"><i class="fas fa-times"></i></a>
   </section>
-  <section class="left-account-info">
-    <img src="images/account-img.png" />
+  <section class="left-account-info" role="account info">
+    <img src="images/account-img.png" aria-label="Account author image"/>
     <article class="account-name">
       <a href="#">Bojack Horseman</a>
-      <a href="#"><i class="fas fa-angle-down"></i></a>
+      <a href="#" aria-label="Account information dropdown" aria-expanded="false"><i class="fas fa-angle-down"></i></a>
     </article>
   </section>
   <section class="left-main side-nav">
     <h3>Main</h3>
-    <ul>
+    <ul role="sidebar navigation main links">
       <li><div><i class="fas fa-home"></i></div><a href="#">Home</a></li>
       <li><div><i class="fas fa-briefcase"></i></div><a href="#">Jobs</a></li>
       <li><div><i class="fas fa-newspaper"></i></div><a href="#">Resume</a></li>
@@ -37,7 +37,7 @@
   </section>
   <section class="left-admin side-nav">
     <h3>Admin</h3>
-    <ul>
+    <ul role="sidebar navigation admin links">
       <li><div><i class="fas fa-users"></i></div></div><a href="#">Users</a></li>
       <li><div><i class="fas fa-compass"></i></div><a href="#">Locations</a></li>
       <li><div><i class="fas fa-retweet"></i></div><a href="#">Workflows</a></li>
@@ -47,25 +47,25 @@
   </section>
   <section class="left-categories side-nav">
     <h3>Categories</h3>
-    <ul>
-      <li><div class="yellow"><i class="fas fa-check-square"></i></div><a href="#">Administrative</a></li>
-      <li><div class="blue"><i class="fas fa-square"></i></div><a href="#"><a href="#">Design</a></li>
-      <li><div class="red"><i class="fas fa-square"></i></div><a href="#">Executive</a></li>
-      <li><div class="green"><i class="fas fa-square"></i></div><a href="#">Human Resources</a></li>
+    <ul role="sidebar navigation catories checklist">
+      <li><div id="yellow"><i class="fas fa-check-square"></i></div><a href="#" role="checkbox" aria-checked="true">Administrative</a></li>
+      <li><div id="blue"><i class="fas fa-square"></i></div><a href="#"><a href="#" role="checkbox">Design</a></li>
+      <li><div id="red"><i class="fas fa-square"></i></div><a href="#" role="checkbox">Executive</a></li>
+      <li><div id="green"><i class="fas fa-square"></i></div><a href="#" role="checkbox">Human Resources</a></li>
     </ul>
   </section>
 </aside>
 
 <section class="container">
   <section class="top-bar-mobile mobile">
-    <a href="#" class="top-menu top-icon desktop">
+    <a href="#" class="top-menu top-icon desktop" aria-controls="aside" aria-expanded="true" aria-label="Toggle sidebar navigation">
       <i class="fas fa-bars"></i>
     </a>
-    <section class="left-account-info">
-      <img src="images/account-img.png" />
+    <section class="left-account-info" role="account info">
+      <img src="images/account-img.png" aria-label="Account author image"/>
       <article class="account-name">
         <a href="#">Bojack Horseman</a>
-        <a href="#"><i class="fas fa-angle-down"></i></a>
+        <a href="#" aria-label="Account information dropdown" aria-expanded="false"><i class="fas fa-angle-down"></i></a>
       </article>
     </section>
   </section>
@@ -75,21 +75,21 @@
   </section>
 
   <section class="top-bar desktop">
-    <a href="#" class="top-menu top-icon desktop">
+    <a href="#" class="top-menu top-icon desktop" aria-controls="aside" aria-expanded="true" aria-label="Toggle sidebar navigation" role="top search area and navigation toggle button">
       <i class="fas fa-bars"></i>
     </a>
     <article class="search">
       <i class="fas fa-search"></i>
-      <input type="text" placeholder="Search for job, task, or resume" />
+      <input type="text" placeholder="Search for job, task, or resume" role="search website"/>
     </article>
     <article class="top-icons">
-      <a href="#" class="top-left-icon top-icon">
+      <a href="#" class="top-left-icon top-icon" aria-label="share with friend button">
         <i class="fas fa-user-plus"></i>
       </a>
-      <a href="#" class="top-middle-icon top-icon">
+      <a href="#" class="top-middle-icon top-icon" aria-label="calendar button">
         <i class="fas fa-calendar-alt"></i>
       </a>
-      <a href="#" class="top-right-icon top-icon">
+      <a href="#" class="top-right-icon top-icon" aria-label="save job button">
         <i class="fab fa-black-tie"></i>
       </a>
     </article>
@@ -98,21 +98,21 @@
   <main class="main-content">
 
   <header>
-    <section class="title">
+    <section class="title" role="header">
       <h1>Customer Service Representative</h1>
       <i class="fas fa-globe"></i>Los Angeles, CA
       <i class="fas fa-circle"></i><a href="#">Preview this post</a>
     </section>
-    <section class="header-links">
-      <a href="#" class="header-link-1"><i class="fas fa-circle"></i>Open</a>
-      <a href="#" class="header-link-2"><i class="fas fa-bookmark"></i></a>
-      <a href="#" class="header-link-3"><i class="fas fa-pencil-alt"></i></a>
-      <a href="#" class="header-link-4"><i class="fas fa-trash-alt"></i></a>
+    <section class="header-links" role="edit post links">
+      <a href="#" class="header-link-1" aria-label="open job toggle button"><i class="fas fa-circle"></i>Open</a>
+      <a href="#" class="header-link-2" aria-label="bookmark job button"><i class="fas fa-bookmark"></i></a>
+      <a href="#" class="header-link-3" aria-label="edit post button"><i class="fas fa-pencil-alt"></i></a>
+      <a href="#" class="header-link-4" aria-label="delete post button"><i class="fas fa-trash-alt"></i></a>
     </section>
   </header>
 
   <section class="top-content">
-    <section class="top-content-links">
+    <section class="top-content-links" role="top content navigation">
       <article class="mobile-top-links mobile">
         <i class="fas fa-ellipsis-h"></i>
         <a href="#"><h2>Notifications</h2> </a>
@@ -135,8 +135,8 @@
         <i class="fas fa-angle-right"></i>
       </article>
 
-      <section class="graphs-section">
-        <section class="donut-graphs">
+      <section class="graphs-section" role="top content graphs">
+        <section class="donut-graphs" role="donut graphs">
           <article class="graph">
             <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
               <circle class="graph-background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
@@ -175,9 +175,9 @@
 
       <section class="chart-section">
         <article class="bar-chart">
-          <img src="images/chart.png" />
+          <img src="images/chart.png" aria-label="job posted per day chart"/>
         </article>
-        <article class="tooltip"><strong>Wednesday, December 3</strong><br /><span>382</span> Applicatants / <span>37</span> Interviews
+        <article class="tooltip" aria-hidden="true"><strong>Wednesday, December 3</strong><br /><span>382</span> Applicatants / <span>37</span> Interviews
         </article>
         <article class="graphs-subtitle">
           TOTALS - Out of 5,231 Views
@@ -189,7 +189,7 @@
   </section>
 
 <section class="main-btm-content">
-  <section class="main-btm-left">
+  <section class="main-btm-left" role="job information section">
     <article class="main-btm-header">Job Description<a href="#"><i class="fas fa-pencil-alt"></i>Edit</a></article>
     <section class="main-btm-container">
       <article class="main-btm-item"><h4>Position Title</h4><span>Customer Service Representative</span></article>
@@ -198,7 +198,7 @@
       <article class="main-btm-item"><h4>Experience</h4><span>Actor for 10 years at 'Horsing Around'</span></article>
       <article class="main-btm-item"><h4>Status</h4><span>Unemployed</span></article>
       <article class="main-btm-item"><h4>Experience</h4><span>Hard rock hotel miracle mile shops new york, new york spaghetti bowl the mirage dice body english. The excalibur insurance caesar's palace the district all in fruit loop stand? Dice unlv shops at crystals capriotti's bars: haze nightclubs straight lounges? Odds card counting shuffle flamingo hotel town square pot breaking even; haze tapped out rack pit the joint! City center mandalay bay dice aria score bankroll, spaghetti bowl fold the excalibur tapped out. Baccarat swim-up blackjack naked city sixth street the pairs wildcard!</span></article>
-      <article class="main-btm-item lead"><h4>Hiring Lead</h4><span><img src="images/lead-img.png" />Mr Peanut Butter</span></article>
+      <article class="main-btm-item lead"><h4>Hiring Lead</h4><span><img src="images/lead-img.png" alt="hiring lead, mr peanut butter, head shot"/>Mr Peanut Butter</span></article>
       <article class="main-btm-item last"><h4>Approved Salary</h4><span><strong>$580,000</strong></span></article>
     </section>
   </section>
@@ -214,7 +214,7 @@
         <p>Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good with tail in the air for put toy mouse in food bowl.</p>
         <div class="copy-link">
           <input type="text" placeholder="http://www.catipsum.com/index.php" class="desktop">
-          <a href="#">Copy<span class="mobile">&nbsp;Link</span></a>
+          <a href="#" aria-label="copy link for job">Copy<span class="mobile">&nbsp;Link</span></a>
         </div>
       </article>
       <article>
@@ -222,7 +222,7 @@
         <p>Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good with tail in the air for put toy mouse in food bowl.</p>
         <div class="copy-link">
           <input type="text" placeholder="http://www.catipsum.com/index.php" class="desktop">
-          <a href="#">Copy<span class="mobile">&nbsp;Link</span></a>
+          <a href="#" aria-label="copy link for job">Copy<span class="mobile">&nbsp;Link</span></a>
         </div>
       </article>
       <article class="last">
@@ -230,7 +230,7 @@
         <p>Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good with tail in the air for put toy mouse in food bowl.</p>
         <div class="copy-link">
           <input type="text" placeholder="http://www.catipsum.com/index.php" class="desktop">
-          <a href="#">Copy<span class="mobile">&nbsp;Link</span></a>
+          <a href="#" aria-label="copy link for job">Copy<span class="mobile">&nbsp;Link</span></a>
         </div>
       </article>
     </section>
@@ -252,8 +252,10 @@
 </main>
 
 </section>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="jquery-3.3.1.min.js"><\/script>')</script>
 <script src="script.js"></script>
+
 </body>
 </html>
